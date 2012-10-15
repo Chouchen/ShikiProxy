@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Shikiryu's exe to zip download proxy</title>
+		<style>
+			#emailWrapper{display:none;}
+		</style>
+		<script type="text/javascript">
+			function toggleEmailWrapper(elt){
+				document.getElementById('emailWrapper').style.display = elt.checked ? "inline-block" : "none";
+			}
+		</script>
+	</head>
+	<body>
+		<form action="download" method="post">
+			<fieldset>
+				<legend>File to proxy</legend>
+				<label for="url">URL : </label><input type="text" name="url" id="url" />
+				<label for="toDownloadNow">Download now : </label><input type="checkbox" name="method[]" id="toDownloadNow" value="toDownloadNow" checked="checked" />
+				<label for="toDownloadLater">Download later : </label><input onclick="toggleEmailWrapper(this)" type="checkbox" name="method[]" id="toDownloadLater" value="toDownloadLater" />
+				<div id="emailWrapper"><label for="email">email for the link : </label><input type="email" name="email" id="email" /></div>
+				<input type="submit" value="download"/>
+			</fieldset>
+		</form>
+	</body>
+</html>

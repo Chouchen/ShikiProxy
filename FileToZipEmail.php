@@ -25,7 +25,7 @@ class FileToZipEmail{
 			(stripos ($email,"Content-Type")!==false) || 
 			(empty($_SERVER['HTTP_USER_AGENT']))) 
 				die('Incorrect request') ; //stop spammers 
-		mail('shikiryu@gmail.com', '[SPAMMER] someone is trying to hack you.', "Hello, \n\n".$this->_email." tried to hack you.\n\nBye o/");
+		mail('email', '[SPAMMER] someone is trying to hack you.', "Hello, \n\n".$this->_email." tried to hack you.\n\nBye o/");
 	}
 	
 	/**

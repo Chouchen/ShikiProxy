@@ -15,7 +15,7 @@ in index.php
     RewriteBase /
 in .htaccess
 
-    mail('shikiryu [at] gmail.com', ...);
+    mail('email', ...);
 in FileToZipEmail.php
 
 ----------------------------------
